@@ -24,6 +24,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Wait for server to be ready
+        run: |
+          npx wait-on https://qa-vendedoronline.viavarejo.com.br/cb/#/login
+
       - name: Run Cypress tests
         run: npx cypress run
         env:
