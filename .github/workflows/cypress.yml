@@ -24,11 +24,15 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Start development server
+        run: npm start &
+        env:
+          NODE_ENV: development
+
       - name: Wait for server to be ready
-        run: |
-          npx wait-on https://qa-vendedoronline.viavarejo.com.br/cb/#/login
+        run: npx wait-on http://localhost:3000
 
       - name: Run Cypress tests
         run: npx cypress run
         env:
-          CYPRESS_baseUrl: ${{ secrets.CYPRESS_BASE_URL }}
+          CYPRESS_baseUrl: http://localhost:3000
