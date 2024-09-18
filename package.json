@@ -1,0 +1,11 @@
+{
+  "name": "vo_cypress_login",
+  "version": "1.0.0",
+  "description": "Cypress test for VO login and adding a product to the cart",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^10.0.0"
+  }
+}
