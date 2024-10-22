@@ -1,0 +1,17 @@
+{
+  "name": "cypresscoder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve -s build",
+    "test": "cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.14.2",
+    "serve": "^14.0.1"
+  }
+}
